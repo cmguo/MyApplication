@@ -35,7 +35,6 @@ public class Word {
         return chineseMeaning;
     }
 
-
     // set
     public void setId(int id) {
         this.id = id;

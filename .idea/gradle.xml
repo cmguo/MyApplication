@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -12,6 +13,9 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/business" />
+            <option value="$PROJECT_DIR$/flutter_app" />
+            <option value="$PROJECT_DIR$/flutter_app/android" />
+            <option value="$PROJECT_DIR$/flutter_app/android/app" />
             <option value="$PROJECT_DIR$/prism" />
           </set>
         </option>

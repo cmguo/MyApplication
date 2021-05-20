@@ -44,9 +44,12 @@ public class MainActivity extends AppCompatActivity {
         List<Interceptor> interceptors = new ArrayList<Interceptor>();
         interceptors.add(new ChuckInterceptor(getApplicationContext()));
         BookService svc = Services.bookService(interceptors);
-        svc.getPaperInfo("66345", "525174").subscribe(info -> {
-            Log.i("MainActivity", "paperId" + info.paperTypesetInfo.paperId);
-            Log.i("MainActivity", "papers" + info.paperTypesetInfo.datas.size());
+        svc.getPaperInfo("68560").subscribe(info -> {
+            Log.i("MainActivity", "paperId:" + info.paperTypesetInfo.paperId);
+            Log.i("MainActivity", "papers:" + info.paperTypesetInfo.datas.size());
+        });
+        svc.getEBookInfo("66345", "525174").subscribe(info -> {
+            Log.i("MainActivity", "pages:" + info.electronicTeachingMaterialList.size());
         });
     }
 
