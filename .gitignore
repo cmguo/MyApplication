@@ -13,3 +13,11 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+.DS_Store
+Pods
+xcuserdata/*
+xcuserdata
+*.xcuserstate
+*.xcuserdatad
+fastlane/build

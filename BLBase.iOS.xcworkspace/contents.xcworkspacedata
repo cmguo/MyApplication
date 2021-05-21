@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:BLApp/BLApp.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:BLBase/BLBase.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Prism/Prism.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:StaticLibraries/StaticLibraries.xcodeproj">
+   </FileRef>
+</Workspace>

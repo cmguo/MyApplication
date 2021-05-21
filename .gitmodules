@@ -1,0 +1,6 @@
+[submodule "StaticLibraries"]
+	path = StaticLibraries
+	url = https://github.com/cmguo/J2ObjcLibraries.git
+[submodule "Prism"]
+	path = Prism
+	url = https://github.com/cmguo/prism.git
