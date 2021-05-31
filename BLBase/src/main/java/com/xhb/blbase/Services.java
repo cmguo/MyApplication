@@ -17,7 +17,7 @@ public class Services {
         if (interceptors == null)
             interceptors = new ArrayList<>();
         interceptors.add(new TicketInterceptor());
-        interceptors.add(new HostInterceptor());
+        //interceptors.add(new HostInterceptor());
         return HttpServices.get(clazz, interceptors,
                 new ResultInfo());
     }

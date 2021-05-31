@@ -2,8 +2,16 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Prism" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries/sources/RxJava-3.0.8" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries/sources/androidx" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries/sources/animal-sniffer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries/sources/gson" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries/sources/okhttp-parent-3.14.9" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries/sources/okio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/StaticLibraries/sources/retrofit-2.9.0" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/business" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/flutter_app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/prism" vcs="Git" />
   </component>
 </project>

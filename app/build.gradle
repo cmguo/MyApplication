@@ -42,8 +42,8 @@ dependencies {
     implementation "androidx.room:room-runtime:$room_version"
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
-    implementation project(":prism")
-    implementation project(":business")
+    implementation project(":Prism")
+    implementation project(":BLBase")
     implementation 'io.reactivex.rxjava3:rxjava:3.0.8'
     implementation 'com.readystatesoftware.chuck:library:1.1.0'
 }

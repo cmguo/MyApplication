@@ -9,7 +9,7 @@ import io.reactivex.rxjava3.core.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
 
-@BaseUri("https://coursaction.talcloud.com/")
+@BaseUri("https://56.2.23.2/")
 public interface BookService {
 
     static class LeftTop

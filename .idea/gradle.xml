@@ -11,12 +11,9 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/business" />
-            <option value="$PROJECT_DIR$/flutter_app" />
-            <option value="$PROJECT_DIR$/flutter_app/android" />
-            <option value="$PROJECT_DIR$/flutter_app/android/app" />
-            <option value="$PROJECT_DIR$/prism" />
+            <option value="$PROJECT_DIR$/BLApp" />
+            <option value="$PROJECT_DIR$/BLBase" />
+            <option value="$PROJECT_DIR$/Prism" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
