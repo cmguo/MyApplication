@@ -17,4 +17,4 @@ FOUNDATION_EXPORT const unsigned char BLBaseVersionString[];
 
 #include <Prism/Prism.h>
 
-//#include "BLBase-Bridge.h"
+#include <BLBase-J2objc.h>

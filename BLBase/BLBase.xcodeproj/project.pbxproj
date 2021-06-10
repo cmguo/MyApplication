@@ -7,42 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54EFC5322C867A0C0310BA50 /* TicketInterceptor.java in Sources */ = {isa = PBXBuildFile; fileRef = 072A0F7E5672E4654DF52237 /* TicketInterceptor.java */; };
+		7110BD0F267223F2005FADAF /* BLBase-J2objc.h in Headers */ = {isa = PBXBuildFile; fileRef = 7110BD0E267223F1005FADAF /* BLBase-J2objc.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		716A926A2654B86400C82B0D /* BLBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 716A92682654B86400C82B0D /* BLBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		717309332655233000AC59AE /* ObservableComsumer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717309322655233000AC59AE /* ObservableComsumer.swift */; };
 		718413BE26578FD600EA7D65 /* Prism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718413BD26578FD600EA7D65 /* Prism.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		718413C92657919C00EA7D65 /* ResultInfo.java in Sources */ = {isa = PBXBuildFile; fileRef = 718413C52657919C00EA7D65 /* ResultInfo.java */; };
-		718413CA2657919C00EA7D65 /* HostInterceptor.java in Sources */ = {isa = PBXBuildFile; fileRef = 718413C62657919C00EA7D65 /* HostInterceptor.java */; };
-		718413CB2657919C00EA7D65 /* TicketInterceptor.java in Sources */ = {isa = PBXBuildFile; fileRef = 718413C72657919C00EA7D65 /* TicketInterceptor.java */; };
-		718413CC2657919C00EA7D65 /* Services.java in Sources */ = {isa = PBXBuildFile; fileRef = 718413C82657919C00EA7D65 /* Services.java */; };
+		984EBFCC4541805D65936150 /* ResultInfo.java in Sources */ = {isa = PBXBuildFile; fileRef = EF19DB7E4330AAC1F3EC4BC2 /* ResultInfo.java */; };
+		C456384ABCC50DEED2E80538 /* HostInterceptor.java in Sources */ = {isa = PBXBuildFile; fileRef = FFA4CA19509298149A6F1871 /* HostInterceptor.java */; };
+		C6F2D1E2694B0C278924179B /* Services.java in Sources */ = {isa = PBXBuildFile; fileRef = B1FDFF2468D71B48132983EF /* Services.java */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
-		716A928B2654BD8300C82B0D /* PBXBuildRule */ = {
+		CC55C23C491FA3FD6A632E1C /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
 			fileType = sourcecode.java;
 			inputFiles = (
 			);
-			isEditable = 1;
+			isEditable = 0;
 			outputFiles = (
-				"$(DERIVED_FILE_DIR)/${INPUT_FILE_BASE}.m",
+				"$(DERIVED_FILE_DIR)/J2objc/${INPUT_FILE_BASE}.m",
+			);
+			outputFilesCompilerFlags = (
+				"",
 			);
 			runOncePerArchitecture = 0;
-			script = "# Type a script or drag a script file from your workspace to insert its path.\n\n# We have alreay compiled java source\n\nPACKET_FILE=${INPUT_FILE_PATH##*/java/}\nOBJC_FILE=${PACKET_FILE/.java/.m}\nmv ${DERIVED_FILE_DIR}/${OBJC_FILE} ${DERIVED_FILE_DIR}/\n";
+			script = "PACKET_FILE=${INPUT_FILE_PATH##*/java/}\nOBJC_FILE=${PACKET_FILE/.java/.m}\nif [ -f  ${DERIVED_FILE_DIR}/objc/${OBJC_FILE} ]; then\n  mkdir -p ${DERIVED_FILE_DIR}/J2objc\n  mv -f ${DERIVED_FILE_DIR}/objc/${OBJC_FILE} ${DERIVED_FILE_DIR}/J2objc\nfi\n";
 		};
 /* End PBXBuildRule section */
 
 /* Begin PBXFileReference section */
+		072A0F7E5672E4654DF52237 /* TicketInterceptor.java */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.java; path = TicketInterceptor.java; sourceTree = "<group>"; };
+		7110BD0E267223F1005FADAF /* BLBase-J2objc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BLBase-J2objc.h"; sourceTree = "<group>"; };
 		716A92652654B86400C82B0D /* BLBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		716A92682654B86400C82B0D /* BLBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLBase.h; sourceTree = "<group>"; };
 		716A92692654B86400C82B0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		717309322655233000AC59AE /* ObservableComsumer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableComsumer.swift; sourceTree = "<group>"; };
 		718413BD26578FD600EA7D65 /* Prism.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Prism.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		718413C52657919C00EA7D65 /* ResultInfo.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = ResultInfo.java; sourceTree = "<group>"; };
-		718413C62657919C00EA7D65 /* HostInterceptor.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = HostInterceptor.java; sourceTree = "<group>"; };
-		718413C72657919C00EA7D65 /* TicketInterceptor.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = TicketInterceptor.java; sourceTree = "<group>"; };
-		718413C82657919C00EA7D65 /* Services.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Services.java; sourceTree = "<group>"; };
-		718413D12657958B00EA7D65 /* BLBase-Bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BLBase-Bridge.h"; sourceTree = "<group>"; };
+		B1FDFF2468D71B48132983EF /* Services.java */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.java; path = Services.java; sourceTree = "<group>"; };
+		EF19DB7E4330AAC1F3EC4BC2 /* ResultInfo.java */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.java; path = ResultInfo.java; sourceTree = "<group>"; };
+		FFA4CA19509298149A6F1871 /* HostInterceptor.java */ = {isa = PBXFileReference; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.java; path = HostInterceptor.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +61,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3388093779787E9B5DE65797 /* blbase */ = {
+			isa = PBXGroup;
+			children = (
+				FFA4CA19509298149A6F1871 /* HostInterceptor.java */,
+				EF19DB7E4330AAC1F3EC4BC2 /* ResultInfo.java */,
+				B1FDFF2468D71B48132983EF /* Services.java */,
+				072A0F7E5672E4654DF52237 /* TicketInterceptor.java */,
+			);
+			path = blbase;
+			sourceTree = "<group>";
+		};
+		473B1E5BCBB614D8D638E175 /* java */ = {
+			isa = PBXGroup;
+			children = (
+				A36C4A7ABF1E7A8CB06CCCCF /* com */,
+			);
+			path = java;
+			sourceTree = "<group>";
+		};
 		716A925B2654B86400C82B0D = {
 			isa = PBXGroup;
 			children = (
 				718413E92657A4DD00EA7D65 /* Swift */,
-				718413C12657919C00EA7D65 /* java */,
 				716A92672654B86400C82B0D /* BLBase */,
 				716A92662654B86400C82B0D /* Products */,
 				716A92712654B87E00C82B0D /* Frameworks */,
+				B631B8A1CB7704F29A90D226 /* src */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,8 +102,8 @@
 		716A92672654B86400C82B0D /* BLBase */ = {
 			isa = PBXGroup;
 			children = (
+				7110BD0E267223F1005FADAF /* BLBase-J2objc.h */,
 				716A92682654B86400C82B0D /* BLBase.h */,
-				718413D12657958B00EA7D65 /* BLBase-Bridge.h */,
 				716A92692654B86400C82B0D /* Info.plist */,
 			);
 			path = BLBase;
@@ -94,48 +117,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		718413C12657919C00EA7D65 /* java */ = {
-			isa = PBXGroup;
-			children = (
-				718413C22657919C00EA7D65 /* com */,
-			);
-			name = java;
-			path = src/main/java;
-			sourceTree = "<group>";
-		};
-		718413C22657919C00EA7D65 /* com */ = {
-			isa = PBXGroup;
-			children = (
-				718413C32657919C00EA7D65 /* xhb */,
-			);
-			path = com;
-			sourceTree = "<group>";
-		};
-		718413C32657919C00EA7D65 /* xhb */ = {
-			isa = PBXGroup;
-			children = (
-				718413C42657919C00EA7D65 /* blbase */,
-			);
-			path = xhb;
-			sourceTree = "<group>";
-		};
-		718413C42657919C00EA7D65 /* blbase */ = {
-			isa = PBXGroup;
-			children = (
-				718413C52657919C00EA7D65 /* ResultInfo.java */,
-				718413C62657919C00EA7D65 /* HostInterceptor.java */,
-				718413C72657919C00EA7D65 /* TicketInterceptor.java */,
-				718413C82657919C00EA7D65 /* Services.java */,
-			);
-			path = blbase;
-			sourceTree = "<group>";
-		};
 		718413E92657A4DD00EA7D65 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
 				717309322655233000AC59AE /* ObservableComsumer.swift */,
 			);
 			path = Swift;
+			sourceTree = "<group>";
+		};
+		A095FF45DE5DD1416ED72610 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				473B1E5BCBB614D8D638E175 /* java */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		A36C4A7ABF1E7A8CB06CCCCF /* com */ = {
+			isa = PBXGroup;
+			children = (
+				C5B15F969FA09A1E012E8503 /* xhb */,
+			);
+			path = com;
+			sourceTree = "<group>";
+		};
+		B631B8A1CB7704F29A90D226 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A095FF45DE5DD1416ED72610 /* main */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		C5B15F969FA09A1E012E8503 /* xhb */ = {
+			isa = PBXGroup;
+			children = (
+				3388093779787E9B5DE65797 /* blbase */,
+			);
+			path = xhb;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				716A926A2654B86400C82B0D /* BLBase.h in Headers */,
+				7110BD0F267223F2005FADAF /* BLBase-J2objc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,15 +176,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 716A926D2654B86400C82B0D /* Build configuration list for PBXNativeTarget "BLBase" */;
 			buildPhases = (
-				7184019A2656537D00EA7D65 /* ShellScript */,
+				8211E6E253CB6351FB548348 /* [J2objc Prev] */,
 				716A92602654B86400C82B0D /* Headers */,
 				716A92612654B86400C82B0D /* Sources */,
 				716A92622654B86400C82B0D /* Frameworks */,
 				716A92632654B86400C82B0D /* Resources */,
-				718413DC26579EF000EA7D65 /* ShellScript */,
+				2F5C3F049E9BF41AD969303B /* [J2objc Post] */,
 			);
 			buildRules = (
-				716A928B2654BD8300C82B0D /* PBXBuildRule */,
+				CC55C23C491FA3FD6A632E1C /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -215,7 +235,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7184019A2656537D00EA7D65 /* ShellScript */ = {
+		2F5C3F049E9BF41AD969303B /* [J2objc Post] */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -225,16 +245,17 @@
 			);
 			inputPaths = (
 			);
+			name = "[J2objc Post]";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif [ ! -f \"${J2OBJC_HOME}/j2objc\" ]; then \n  echo \"J2OBJC_HOME is not correctly defined, currently set to '${J2OBJC_HOME}'\"\n  exit 1\nfi\n\nset -x\n\n# Compile java with j2objc\n\nmkdir -p ${DERIVED_FILE_DIR}\nfind ${SRCROOT}/src -name \"*.java\" > ${DERIVED_FILE_DIR}/JavaList\nif [ ! -f ${DERIVED_FILE_DIR}/JavaList.d ]; then touch ${DERIVED_FILE_DIR}/JavaList.d; fi\nif ${SRCROOT}/../Tools/checkDiff.awk ${DERIVED_FILE_DIR}/JavaList ${DERIVED_FILE_DIR}/JavaList.d > ${DERIVED_FILE_DIR}/JavaList.d1 ; then exit 0; fi\nmv ${DERIVED_FILE_DIR}/JavaList.d1 ${DERIVED_FILE_DIR}/JavaList.d\n\n\"${J2OBJC_HOME}/../build/j.sh\" -d ${DERIVED_FILE_DIR} -cp ${CLASS_PATH} -g @${DERIVED_FILE_DIR}/JavaList\n\n\n# Java classes & jar\n\nrm -f ${METAL_LIBRARY_OUTPUT_DIR}/classes.jar\njar --create --file ${METAL_LIBRARY_OUTPUT_DIR}/classes.jar -C ${DERIVED_FILE_DIR}/classes .\n\n# Headers from BLBase java\n\nfind ${DERIVED_FILE_DIR} -name \"*.h\" | awk \"{ sub(\\\"${DERIVED_FILE_DIR}/\\\", \\\"\\\", \\$0); print \\$0 }\" > ${DERIVED_FILE_DIR}/J2Objc2\nawk '{ print \"#include \\\"\" $0 \"\\\"\" }' ${DERIVED_FILE_DIR}/J2Objc2 > ${METAL_LIBRARY_OUTPUT_DIR}/Headers/blbase2.h\ntar -c - -C ${DERIVED_FILE_DIR} -T ${DERIVED_FILE_DIR}/J2Objc2 | tar -x -C ${METAL_LIBRARY_OUTPUT_DIR}/Headers\nrm -f ${DERIVED_FILE_DIR}/J2Objc2\n\n";
+			shellScript = "set -e\n${J2OBJC_HOME}/tools/j2objc_post.sh\n";
 			showEnvVarsInLog = 0;
 		};
-		718413DC26579EF000EA7D65 /* ShellScript */ = {
+		8211E6E253CB6351FB548348 /* [J2objc Prev] */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
@@ -244,13 +265,14 @@
 			);
 			inputPaths = (
 			);
+			name = "[J2objc Prev]";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nset -x\n# BLBase J2Objc bridge header, open include from BLBase.h\n\ncp -rf \"${SRCROOT}/BLBase/BLBase-Bridge.h\" \"${CODESIGNING_FOLDER_PATH}/Headers\"\nsed -i xxx 's|//#|#|g' \"${CODESIGNING_FOLDER_PATH}/Headers/BLBase.h\"\nrm -f \"${CODESIGNING_FOLDER_PATH}/Headers/BLBase.hxxx\"\n";
+			shellScript = "set -e\n\nexport JAVA_DIRS=\"${SRCROOT}/src/main/java\"\nexport J2OBJC_DEPENDS=Prism\n${J2OBJC_HOME}/tools/j2objc_prev.sh\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -260,11 +282,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				718413C92657919C00EA7D65 /* ResultInfo.java in Sources */,
-				718413CC2657919C00EA7D65 /* Services.java in Sources */,
-				718413CB2657919C00EA7D65 /* TicketInterceptor.java in Sources */,
-				718413CA2657919C00EA7D65 /* HostInterceptor.java in Sources */,
 				717309332655233000AC59AE /* ObservableComsumer.swift in Sources */,
+				C456384ABCC50DEED2E80538 /* HostInterceptor.java in Sources */,
+				984EBFCC4541805D65936150 /* ResultInfo.java in Sources */,
+				C6F2D1E2694B0C278924179B /* Services.java in Sources */,
+				54EFC5322C867A0C0310BA50 /* TicketInterceptor.java in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,7 +302,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -304,12 +326,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CLASS_PATH = "/Users/cmguo/Library/Developer/Xcode/DerivedData/BLBase.iOS-gufljryaaxtuisfsptzepatpddqs/Build/Products/Debug-iphonesimulator/Prism.framework/classes.jar";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = ../Libraries;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -324,10 +346,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
-					../Libraries/JRE.framework/Headers,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				J2OBJC_HOME = "/Users/cmguo/work/j2objc/j2objc-2.7";
 				JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home";
@@ -351,7 +369,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
@@ -375,12 +393,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CLASS_PATH = "/Users/cmguo/Library/Developer/Xcode/DerivedData/BLBase.iOS-gufljryaaxtuisfsptzepatpddqs/Build/Products/Debug-iphonesimulator/Prism.framework/classes.jar";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = ../Libraries;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -389,10 +407,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
-					../Libraries/JRE.framework/Headers,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				J2OBJC_HOME = "/Users/cmguo/work/j2objc/j2objc-2.7";
 				JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home";
@@ -416,8 +430,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					../Libraries,
+					"${BUILT_PRODUCTS_DIR}",
+				);
+				HEADER_SEARCH_PATHS = (
+					../Libraries/JRE.framework/Headers,
+					../Libraries/JSR305.framework/Headers,
+					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
+					"${DERIVED_FILE_DIR}/objc",
+					BLBase,
+				);
 				INFOPLIST_FILE = BLBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				J2OBJC_DEPENDS = Prism;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -441,8 +467,20 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					../Libraries,
+					"${BUILT_PRODUCTS_DIR}",
+				);
+				HEADER_SEARCH_PATHS = (
+					../Libraries/JRE.framework/Headers,
+					../Libraries/JSR305.framework/Headers,
+					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
+					"${DERIVED_FILE_DIR}/objc",
+					BLBase,
+				);
 				INFOPLIST_FILE = BLBase/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				J2OBJC_DEPENDS = Prism;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

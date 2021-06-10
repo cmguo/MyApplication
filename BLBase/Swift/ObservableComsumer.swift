@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Prism
 
 public class ObservableComsumer : NSObject, RXConsumer {
     

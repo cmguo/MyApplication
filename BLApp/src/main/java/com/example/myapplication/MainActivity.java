@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.i("MainActivity", "pages:" + info.electronicTeachingMaterialList.size());
                 }, error -> {
                     Log.w("MainActivity", error);
-                });
+                }).dispose();
             }
         });
     }

@@ -1,5 +1,5 @@
 [submodule "StaticLibraries"]
-	path = StaticLibraries
+	path = ThirdParty
 	url = https://github.com/cmguo/J2ObjcLibraries.git
 [submodule "Prism"]
 	path = Prism
