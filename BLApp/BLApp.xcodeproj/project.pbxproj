@@ -3,63 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7110BD132672F4C9005FADAF /* BLModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7110BD122672F4C9005FADAF /* BLModule.framework */; };
+		7110BD172672F56C005FADAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7110BD162672F56C005FADAF /* SceneDelegate.swift */; };
 		718413F82657A58400EA7D65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718413F72657A58400EA7D65 /* AppDelegate.swift */; };
-		718413FA2657A58400EA7D65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718413F92657A58400EA7D65 /* SceneDelegate.swift */; };
-		718413FC2657A58400EA7D65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718413FB2657A58400EA7D65 /* ViewController.swift */; };
 		718413FF2657A58400EA7D65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718413FD2657A58400EA7D65 /* Main.storyboard */; };
 		718414012657A58700EA7D65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718414002657A58700EA7D65 /* Assets.xcassets */; };
 		718414042657A58700EA7D65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 718414022657A58700EA7D65 /* LaunchScreen.storyboard */; };
-		718414132657A69F00EA7D65 /* Services.java in Sources */ = {isa = PBXBuildFile; fileRef = 718414112657A69F00EA7D65 /* Services.java */; };
-		718414142657A69F00EA7D65 /* BookService.java in Sources */ = {isa = PBXBuildFile; fileRef = 718414122657A69F00EA7D65 /* BookService.java */; };
 		718414192657A6B900EA7D65 /* BLBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718414172657A6B900EA7D65 /* BLBase.framework */; };
 		7184141B2657A6B900EA7D65 /* Prism.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718414182657A6B900EA7D65 /* Prism.framework */; };
-		718414222657A7DC00EA7D65 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718414212657A7DC00EA7D65 /* Item.swift */; };
-		718414252657A80100EA7D65 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718414242657A80100EA7D65 /* ImageCache.swift */; };
-		7184142D2657A99A00EA7D65 /* ImageURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7184142C2657A99A00EA7D65 /* ImageURLProtocol.swift */; };
 		718414342657ACCD00EA7D65 /* JRE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718414322657ACCD00EA7D65 /* JRE.framework */; };
 		718414362657ACCD00EA7D65 /* JSR305.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 718414332657ACCD00EA7D65 /* JSR305.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildRule section */
-		7184140C2657A67D00EA7D65 /* PBXBuildRule */ = {
-			isa = PBXBuildRule;
-			compilerSpec = com.apple.compilers.proxy.script;
-			fileType = sourcecode.java;
-			inputFiles = (
-			);
-			isEditable = 1;
-			outputFiles = (
-				"$(DERIVED_FILE_DIR)/${INPUT_FILE_BASE}.m",
-			);
-			outputFilesCompilerFlags = (
-				"-fno-objc-arc",
-			);
-			runOncePerArchitecture = 0;
-			script = "# Type a script or drag a script file from your workspace to insert its path.\n\n# We have alreay compiled java source\n\nPACKET_FILE=${INPUT_FILE_PATH##*/java/}\nOBJC_FILE=${PACKET_FILE/.java/.m}\nmv ${DERIVED_FILE_DIR}/${OBJC_FILE} ${DERIVED_FILE_DIR}/\n";
-		};
-/* End PBXBuildRule section */
-
 /* Begin PBXFileReference section */
+		7110BD122672F4C9005FADAF /* BLModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BLModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7110BD162672F56C005FADAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		718413F42657A58400EA7D65 /* BLApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		718413F72657A58400EA7D65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		718413F92657A58400EA7D65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		718413FB2657A58400EA7D65 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		718413FE2657A58400EA7D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		718414002657A58700EA7D65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		718414032657A58700EA7D65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		718414052657A58700EA7D65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		718414112657A69F00EA7D65 /* Services.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = Services.java; sourceTree = "<group>"; };
-		718414122657A69F00EA7D65 /* BookService.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = BookService.java; sourceTree = "<group>"; };
 		718414172657A6B900EA7D65 /* BLBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BLBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		718414182657A6B900EA7D65 /* Prism.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Prism.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		718414212657A7DC00EA7D65 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		718414242657A80100EA7D65 /* ImageCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
-		7184142C2657A99A00EA7D65 /* ImageURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageURLProtocol.swift; sourceTree = "<group>"; };
-		7184142F2657AA0E00EA7D65 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		718414322657ACCD00EA7D65 /* JRE.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JRE.framework; path = ../../../j2objc/frameworks/JRE.framework; sourceTree = "<group>"; };
 		718414332657ACCD00EA7D65 /* JSR305.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSR305.framework; path = ../../../j2objc/frameworks/JSR305.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +42,7 @@
 				7184141B2657A6B900EA7D65 /* Prism.framework in Frameworks */,
 				718414342657ACCD00EA7D65 /* JRE.framework in Frameworks */,
 				718414192657A6B900EA7D65 /* BLBase.framework in Frameworks */,
+				7110BD132672F4C9005FADAF /* BLModule.framework in Frameworks */,
 				718414362657ACCD00EA7D65 /* JSR305.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,8 +53,6 @@
 		718413EB2657A58400EA7D65 = {
 			isa = PBXGroup;
 			children = (
-				7184140D2657A69F00EA7D65 /* java */,
-				7184142F2657AA0E00EA7D65 /* Bridging-Header.h */,
 				718413F62657A58400EA7D65 /* BLApp */,
 				718413F52657A58400EA7D65 /* Products */,
 				718414162657A6B900EA7D65 /* Frameworks */,
@@ -102,56 +71,19 @@
 			isa = PBXGroup;
 			children = (
 				718413F72657A58400EA7D65 /* AppDelegate.swift */,
-				718413F92657A58400EA7D65 /* SceneDelegate.swift */,
-				7184142C2657A99A00EA7D65 /* ImageURLProtocol.swift */,
-				718414212657A7DC00EA7D65 /* Item.swift */,
-				718414242657A80100EA7D65 /* ImageCache.swift */,
-				718413FB2657A58400EA7D65 /* ViewController.swift */,
 				718413FD2657A58400EA7D65 /* Main.storyboard */,
 				718414002657A58700EA7D65 /* Assets.xcassets */,
 				718414022657A58700EA7D65 /* LaunchScreen.storyboard */,
 				718414052657A58700EA7D65 /* Info.plist */,
+				7110BD162672F56C005FADAF /* SceneDelegate.swift */,
 			);
 			path = BLApp;
-			sourceTree = "<group>";
-		};
-		7184140D2657A69F00EA7D65 /* java */ = {
-			isa = PBXGroup;
-			children = (
-				7184140E2657A69F00EA7D65 /* com */,
-			);
-			name = java;
-			path = src/main/java;
-			sourceTree = "<group>";
-		};
-		7184140E2657A69F00EA7D65 /* com */ = {
-			isa = PBXGroup;
-			children = (
-				7184140F2657A69F00EA7D65 /* xhb */,
-			);
-			path = com;
-			sourceTree = "<group>";
-		};
-		7184140F2657A69F00EA7D65 /* xhb */ = {
-			isa = PBXGroup;
-			children = (
-				718414102657A69F00EA7D65 /* business */,
-			);
-			path = xhb;
-			sourceTree = "<group>";
-		};
-		718414102657A69F00EA7D65 /* business */ = {
-			isa = PBXGroup;
-			children = (
-				718414112657A69F00EA7D65 /* Services.java */,
-				718414122657A69F00EA7D65 /* BookService.java */,
-			);
-			path = business;
 			sourceTree = "<group>";
 		};
 		718414162657A6B900EA7D65 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7110BD122672F4C9005FADAF /* BLModule.framework */,
 				718414322657ACCD00EA7D65 /* JRE.framework */,
 				718414332657ACCD00EA7D65 /* JSR305.framework */,
 				718414172657A6B900EA7D65 /* BLBase.framework */,
@@ -167,13 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 718414082657A58700EA7D65 /* Build configuration list for PBXNativeTarget "BLApp" */;
 			buildPhases = (
-				7184141F2657A6ED00EA7D65 /* ShellScript */,
 				718413F02657A58400EA7D65 /* Sources */,
 				718413F12657A58400EA7D65 /* Frameworks */,
 				718413F22657A58400EA7D65 /* Resources */,
 			);
 			buildRules = (
-				7184140C2657A67D00EA7D65 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -227,41 +157,13 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		7184141F2657A6ED00EA7D65 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif [ ! -f \"${J2OBJC_HOME}/j2objc\" ]; then \n  echo \"J2OBJC_HOME is not correctly defined, currently set to '${J2OBJC_HOME}'\"\n  exit 1\nfi\n\nset -x\n\n# Prepare java classes\n\nmkdir -p ${DERIVED_FILE_DIR}\nfind ${SRCROOT}/src -name \"*.java\" > ${DERIVED_FILE_DIR}/JavaList\nif [ ! -f ${DERIVED_FILE_DIR}/JavaList.d ]; then touch ${DERIVED_FILE_DIR}/JavaList.d; fi\nif ${SRCROOT}/../Tools/checkDiff.awk ${DERIVED_FILE_DIR}/JavaList ${DERIVED_FILE_DIR}/JavaList.d > ${DERIVED_FILE_DIR}/JavaList.d1 ; then exit 0; fi\nmv ${DERIVED_FILE_DIR}/JavaList.d1 ${DERIVED_FILE_DIR}/JavaList.d\n\n\"${J2OBJC_HOME}/../build/j.sh\" -d ${DERIVED_FILE_DIR} -cp ${CLASS_PATH} -reflect --prefix com.xhb.business=BI -g @${DERIVED_FILE_DIR}/JavaList\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		718413F02657A58400EA7D65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				718413FC2657A58400EA7D65 /* ViewController.swift in Sources */,
-				7184142D2657A99A00EA7D65 /* ImageURLProtocol.swift in Sources */,
-				718414132657A69F00EA7D65 /* Services.java in Sources */,
-				718414142657A69F00EA7D65 /* BookService.java in Sources */,
 				718413F82657A58400EA7D65 /* AppDelegate.swift in Sources */,
-				718414222657A7DC00EA7D65 /* Item.swift in Sources */,
-				718414252657A80100EA7D65 /* ImageCache.swift in Sources */,
-				718413FA2657A58400EA7D65 /* SceneDelegate.swift in Sources */,
+				7110BD172672F56C005FADAF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,7 +222,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CLASS_PATH = "/Users/cmguo/Library/Developer/Xcode/DerivedData/BLBase.iOS-gufljryaaxtuisfsptzepatpddqs/Build/Products/Debug-iphonesimulator/Prism.framework/classes.jar:/Users/cmguo/Library/Developer/Xcode/DerivedData/BLBase.iOS-gufljryaaxtuisfsptzepatpddqs/Build/Products/Debug-iphonesimulator/BLBase.framework/classes.jar";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -340,14 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${BUILT_PRODUCTS_DIR}/BLBase.framework/Headers",
-					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
-					../Libraries/JRE.framework/Headers,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				J2OBJC_HOME = "/Users/cmguo/work/j2objc/j2objc-2.7";
-				JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home";
 				LIBRARY_SEARCH_PATHS = ../Libraries/lib;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -361,7 +255,6 @@
 				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -399,7 +292,6 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CLASS_PATH = "/Users/cmguo/Library/Developer/Xcode/DerivedData/BLBase.iOS-gufljryaaxtuisfsptzepatpddqs/Build/Products/Debug-iphonesimulator/Prism.framework/classes.jar:/Users/cmguo/Library/Developer/Xcode/DerivedData/BLBase.iOS-gufljryaaxtuisfsptzepatpddqs/Build/Products/Debug-iphonesimulator/BLBase.framework/classes.jar";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -413,14 +305,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = (
-					"${BUILT_PRODUCTS_DIR}/BLBase.framework/Headers",
-					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
-					../Libraries/JRE.framework/Headers,
-				);
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
-				J2OBJC_HOME = "/Users/cmguo/work/j2objc/j2objc-2.7";
-				JAVA_HOME = "/Library/Java/JavaVirtualMachines/jdk-11.0.9.jdk/Contents/Home";
 				LIBRARY_SEARCH_PATHS = ../Libraries/lib;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -433,7 +318,6 @@
 				);
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -446,7 +330,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BEVZGB29V;
+				HEADER_SEARCH_PATHS = (
+					../Libraries/JRE.framework/Headers,
+					../Libraries/JSR305.framework/Headers,
+					"${BUILT_PRODUCTS_DIR}/BLModule.framework/Headers",
+					"${BUILT_PRODUCTS_DIR}/BLBase.framework/Headers",
+					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
+				);
 				INFOPLIST_FILE = BLApp/Info.plist;
+				J2OBJC_DEPENDS = "BLModule BLBase Prism";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,7 +357,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9BEVZGB29V;
+				HEADER_SEARCH_PATHS = (
+					../Libraries/JRE.framework/Headers,
+					../Libraries/JSR305.framework/Headers,
+					"${BUILT_PRODUCTS_DIR}/BLModule.framework/Headers",
+					"${BUILT_PRODUCTS_DIR}/BLBase.framework/Headers",
+					"${BUILT_PRODUCTS_DIR}/Prism.framework/Headers",
+				);
 				INFOPLIST_FILE = BLApp/Info.plist;
+				J2OBJC_DEPENDS = "BLModule BLBase Prism";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
